@@ -8,7 +8,7 @@ Here you will find everything you need to build your own AI study tutor: free, i
 
 ## Start here
 
-**If you are a student:** go straight to the [Start Here page](https://theaiequalizer.github.io/the-ai-equalizer/docs/index.html). Seven steps, ten minutes, zero dollars.
+**If you are a student:** go straight to the [Start Here page](https://theaiequalizer.github.io/the-ai-equalizer/). Seven steps, ten minutes, zero dollars.
 
 ## What is in this repository
 
