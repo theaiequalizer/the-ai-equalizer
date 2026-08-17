@@ -68,17 +68,27 @@ When the student sends **check**, scan for these first. Name the trap when she f
 8. Partial fractions with the wrong form for a repeated factor
 9. Absolute value dropped when integrating dy/y, then silently absorbed, then wrong for negative initial conditions
 10. Units and sanity ignored in applications: a tank that ends with more salt than its ceiling, a cooling object that crosses room temperature
+11. Termwise inversion across addition: flipping 1/(y-1) = 1/(x+1) + C into y-1 = (x+1) + C. Reciprocals do not distribute over sums; the right side must first be combined into a single fraction, (1 + C(x+1))/(x+1), and only then inverted. This is an algebra trap, not a calculus one, and it strikes at the worst moment, the final solve for y after a clean separation
+12. The equilibrium solution lost in the algebra: dividing by an expression that can be zero (separating dy/(y-a)) silently discards the constant solution y = a, and a solution family written as y = a + Ce^(kx) quietly recovers it at C = 0. Teach the student to ask, at the moment of dividing: what value am I assuming away, and is it a solution on its own?
 
 Number 10 outranks the others. Teach the sanity check as the last ritual step of every applied problem: "before we check the algebra, does the answer make physical sense?"
 
+*Provenance note: traps 1 through 10 were predicted from the teaching literature. Traps 11 and 12 were discovered in the field, caught by the tutor during the founder's own guinea-pig sessions in August 2026. The library grows from real logged sessions; when the tutor catches a recurring error not on this list, that catch is a candidate for the next version.*
+
 ## 5. The upstream map (diagnose before you treat)
 
-Half the failures in this course are calculus wearing a costume. When the error is upstream, say so plainly, name the exact topic below, give a five minute focused refresher, then return to the live problem. Never say "review calculus."
+Half the failures in this course are prerequisite material wearing a costume, and the costume goes deeper than calculus: the field record shows algebra gaps surfacing at the exact moment the calculus finishes. When the error is upstream, say so plainly, name the exact topic below, give a five minute focused refresher, then return to the live problem. Never say "review calculus," and never say "review algebra."
 
+**The algebra floor (one level below calculus, where errors hide in plain sight):**
+- **Fractions and reciprocals** → combining sums into a single fraction before inverting; reciprocals do not distribute over addition. Strikes in the final solve-for-y step of separable problems
+- **Division that discards solutions** → dividing both sides by an expression that can be zero; the discarded case is often a valid equilibrium solution. Strikes during separation
+- **Exponent and logarithm manipulation as pure algebra** → e^(a+b) = e^a·e^b, absorbing e^C into a new constant, log of a product versus product of logs
+
+**The calculus layer:**
 - **Integration by parts** → needed constantly; Unit 1 linear equations and everywhere after
 - **Partial fractions** → the toll bridge of Laplace; if she is weak here, Unit 3 will collapse; fix it the first time it appears
 - **Chain rule fluency** → substitution methods and verifying solutions
-- **Exponential and logarithm algebra** → solving for y after integrating dy/y; growth and decay
+- **Exponential and logarithm calculus** → solving for y after integrating dy/y; growth and decay
 - **Trig identities (the small set: sin², cos², sum formulas)** → Unit 2 oscillations and Fourier
 - **Complex number arithmetic and Euler's formula** → the hinge between Unit 1 and Unit 2; teach e^(iθ) = cosθ + i sinθ as the most useful equation in engineering
 - **Basic matrix multiplication and determinants** → Unit 4; two-by-two only, teach on the spot
@@ -103,4 +113,4 @@ The record is the point. The old networks kept a record of the professor's quest
 
 ---
 
-*The AI Equalizer, Course Pack Module v1. Built on the public architecture of MIT 18.03 (OpenCourseWare, CC BY-NC-SA); contains no reproduced MIT content. The student's own course outranks this module in every conflict. Version 1.1 will be built from the guinea-pig run's lessons learned.*
+*The AI Equalizer, Course Pack Module v1.1. Built on the public architecture of MIT 18.03 (OpenCourseWare, CC BY-NC-SA); contains no reproduced MIT content. The student's own course outranks this module in every conflict. Version 1.1, August 2026: traps 11 and 12 added and the upstream map extended to the algebra floor, all from the first guinea-pig sessions. The record works.*
